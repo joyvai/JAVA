@@ -26,9 +26,6 @@ public class AccountTest{
 		
 		System.out.printf("account1 balance: $%.2f\n",account1.getBalance());
 		System.out.printf("account2 balance: $%.2f\n",account2.getBalance());
-		
-		
-		
-		
+						
 	}
 }
