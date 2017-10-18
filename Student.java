@@ -6,18 +6,23 @@ public class Student{
 	static int courseLimit=10; // fixed maintime i change the value
 	int courseCounter=0;
 	Course course[]; // class type array
+	Account1 account;
 	//withour parameter
 	public Student(){
-		this("Lotif",122,11,"computer science");
+		//this("Lotif",122,11,"computer science");
 		//System.out.println("Empty Constructor");
 		
 	}
 	// constructor with parameter 
-	public Student(String name, int id, int Age,String dept){
+	public Student(String name, int id, int Age,String dept,Account1 account){
+		// here account is Account1 class type.
+		// account object access everything here which is public in class.
+		
 		stdName = name;
 		stdId = id;
 		stdAge = Age;
 		stdDept = dept;
+		this.account = account;
 		course = new Course[10]; // i create space for array to hold the memory address
 		//courseCounter = 0;
 
@@ -26,6 +31,7 @@ public class Student{
 	public void addCourse(Course temp){
 		if (courseCounter < courseLimit){
 		course[courseCounter] =temp;// save course in array
+		account.withdraw();
 		courseCounter++;
 		System.out.println("Course Added: ");
 	}
@@ -65,6 +71,7 @@ public class Student{
 		if (courseFoundFlag==1){
 			System.out.println("dropped");
 		}
+		account.deposit();
 	}
 	public void showCourses(){
 		for (int i=0; i<courseCounter;i++){
