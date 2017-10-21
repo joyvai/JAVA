@@ -1,3 +1,5 @@
+// inheritance apply here 
+// code re usability
 class Programmer{
 	float salary=4000;
 }
