@@ -17,10 +17,10 @@ class C extends B {
 
 class HierarchicalInheritanceTest{
 	public static void main(String[] args){
-		B a = new B();
-		C c = new C();
-		a.methodA();
-		a.methodB();
+		B a = new B(); // first it's call the constructor
+		C c = new C(); // c call b -> b call the A -> A call the constructor
+		a.methodA(); // class A method call 
+		a.methodB(); 
 		c.methodB();
 		c.methodC();
 	}
