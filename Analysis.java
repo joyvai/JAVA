@@ -12,7 +12,17 @@ public class Analysis{
 		while(studentCounter <= 10){
 			System.out.println("Enter result (1=pass, 2= fail): ");
 			result = input.nextInt();
-
+			if (result == 1){
+				passes++;
+			}
+			else{
+				failures++;
+			}
+			studentCounter++;
+		}
+		System.out.printf ("Passed: %d\nFailed: %d\n",passes,failures);
+		if (passes >8){
+			System.out.println("Raise Tuition");
 		}
 	}
 }
